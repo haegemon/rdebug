@@ -45,7 +45,6 @@ function url_domain(data) {
 document.addEventListener('DOMContentLoaded', function() {
   getCurrentTabUrl(function(url) {
         if (url.indexOf('rbth') > 0) {
-            alert("This is the Link : ( s )"+ url_domain(url) );
             chrome.cookies.set({ url: "http://"+url_domain(url), name: "debug_rbth", value: "1", expirationDate: (Math.floor(Date.now() / 1000) + 3600) });
             chrome.cookies.set({ url: "http://"+url_domain(url), name: "XDEBUG_SESSION_START", value: xdebugName, expirationDate: (Math.floor(Date.now() / 1000) + 3600) });
         }
